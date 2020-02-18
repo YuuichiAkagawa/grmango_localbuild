@@ -1,4 +1,4 @@
-# GR-MANGO オフライン開発環境 Dockerfile
+# GR-MANGO オフライン開発環境(Mbed CLI) Dockerfile
 基本的に[公式情報](https://github.com/d-kato/RZ_A2M_Mbed_samples)の手順通りです。デバッグ環境は含みません。
 
 ## コンテナのビルド
@@ -13,7 +13,7 @@ docker build -t gr-mango:beta .
 docker run --rm -it -v ~/projects:/mbed/projects gr-mango:beta
 ```
 volumeを使っているのでプロジェクトを格納するディレクトリを指定してください。
-例では、ホームディレクトリあるprojectsを指定しています。
+例では、ホームディレクトリにあるprojectsを指定しています。
 
 ※ファイルのオーナーがrootになって扱いにくいので、`umask 000`としてます。
 
