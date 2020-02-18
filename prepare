@@ -1,0 +1,11 @@
+#! /bin/bash
+if [ -f .mbed ]; then
+   exit 0
+fi
+touch .mbed
+echo "GCC_ARM_PATH='${GCC_ARM_PATH}'" > mbed_settings.py
+ln -s /mbed/RZ_A2M_Mbed_samples/mbed-os ./mbed-os
+ln -s /mbed/RZ_A2M_Mbed_samples/mbed-gr-libs ./mbed-gr-libs
+ln -s /mbed/RZ_A2M_Mbed_samples/mbed-http ./mbed-http
+ln -s /mbed/RZ_A2M_Mbed_samples/bootloader_d_n_d ./bootloader_d_n_d
+exit 0
