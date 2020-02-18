@@ -51,7 +51,6 @@ $ build
 $ cd /mbed/projects
 $ mkdir myproj
 $ cd myproj
-$ touch .mbed
 $ prepare
 main.cppにプログラム作成
 $ build
